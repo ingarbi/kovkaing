@@ -60,11 +60,52 @@
 }
 
 
+/* Основной стиль "сварного" текста */
+.welded-text {
+    font-family: 'Arial Black', sans-serif; /* Жирный шрифт */
+    color: #e0a800; /* Цвет раскалённого металла */
+    text-shadow: 
+        0 0 5px #ff4500, /* Оранжевое свечение */
+        0 0 10px #e0a800, /* Жёлтое свечение */
+        0 0 15px #000; /* Тень для объёма */
+    position: relative;
+    display: inline-block;
+}
+
+/* Эффект "неровных краёв" (опционально) */
+.welded-text::after {
+    content: '';
+    position: absolute;
+    bottom: -5px;
+    left: 0;
+    width: 100%;
+    height: 3px;
+    background: linear-gradient(90deg, #ff4500, #e0a800, #ff4500);
+    border-radius: 50%;
+    opacity: 0.7;
+}
 
 
 
+.forged-3d-text {
+    font-family: 'Rough Metal', sans-serif;
+    color: #6e5c4b;
+    text-shadow: 
+        3px 3px 0 #3a2e22, 
+        6px 6px 0 #1a130d;
+    position: relative;
+    display: inline-block;
+}
 
-
+.forged-3d-text::before {
+    content: attr(data-text);
+    position: absolute;
+    top: 2px;
+    left: 2px;
+    color: #b8a07e;
+    z-index: -1;
+    opacity: 0.7;
+}
 
 
 
