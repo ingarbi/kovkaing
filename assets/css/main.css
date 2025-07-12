@@ -2615,8 +2615,20 @@ input, select, textarea {
 				#main section.cover header {
 					padding: 0 1em;
 				}
-
-		/* Footer */
+			.avito-icon {
+				display: inline-flex;
+				align-items: center;
+				align-items: center;
+				justify-content: center;
+				width: 2em;
+				height: 2em;
+				}
+				
+				.avito-icon svg {
+				width: 1em;
+				height: 1em;
+				}
+			/* Footer */
 
 			#footer .copyright li {
 				display: block;
@@ -2630,4 +2642,5 @@ input, select, textarea {
 					margin-top: 0;
 				}
 
-	}
+	}	
+	
