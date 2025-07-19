@@ -58,6 +58,9 @@
         flex-direction: column;
     }
 }
+.avito-icon:hover {
+    color: #FFA500; 
+}
 
 
 /* Основной стиль "сварного" текста */
