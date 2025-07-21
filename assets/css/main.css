@@ -2099,6 +2099,7 @@ input, select, textarea {
 		margin: 1.75em 1.5em 1.5em 1.5em;
 		min-height: 48px;
 		cursor: default;
+		
 	}
 
 		#logo h1 {
@@ -2203,6 +2204,49 @@ input, select, textarea {
 				}
 
 /* Main */
+
+/* Blurred video background */
+#top {
+  position: relative;
+  overflow: hidden;
+}
+
+#top .background-video {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  z-index: 0;
+  filter: blur(10px);
+  transform: scale(1.1); /* Prevent edge cropping from blur */
+  pointer-events: none;
+}
+
+#top .container {
+  position: relative;
+  z-index: 1;
+}
+#top.one {
+  background: none !important;
+}
+#top.one.cover {
+  height: 100vh; /* Full screen */
+  min-height: 600px; /* Optional: ensures it doesn't get too short on mobile */
+  padding: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  position: relative;
+}
+	#portfolio, #about, #contact {
+	scroll-margin-top: 100px; /* Adjust based on header height */
+	}
+	#contact {
+  min-height: 100vh;
+}
 
 	#main {
 		margin-left: 375px;
