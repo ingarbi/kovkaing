@@ -2753,3 +2753,84 @@ input, select, textarea {
   justify-content: center;
   align-items: center;
 }
+
+ .social-icons a.social-icon i {
+        transition: color 0.3s ease;
+      }
+
+      .social-icons a.social-icon:hover i {
+        color: #f1a33c !important;
+      }
+
+	    .modal {
+        display: none;
+        position: fixed;
+        z-index: 1000;
+        padding-top: 50px;
+        left: 0;
+        top: 0;
+        width: 100%;
+        height: 100%;
+        overflow: auto;
+        background-color: rgba(0, 0, 0, 0.9);
+      }
+
+      .modal-content {
+        margin: auto;
+        display: block;
+        width: 80%;
+        max-width: 1200px;
+      }
+
+      .close,
+      .prev,
+      .next {
+        position: absolute;
+        top: 15px;
+        right: 35px;
+        color: #f1f1f1;
+        font-size: 40px;
+        font-weight: bold;
+        cursor: pointer;
+      }
+
+      .prev,
+      .next {
+        top: 50%;
+        transform: translateY(-50%);
+        padding: 16px;
+        color: white;
+        font-weight: bold;
+        font-size: 20px;
+        user-select: none;
+      }
+
+      .prev {
+        left: 15px;
+      }
+
+      .next {
+        right: 15px;
+      }
+
+      .close:hover,
+      .close:focus,
+      .prev:hover,
+      .prev:focus,
+      .next:hover,
+      .next:focus {
+        color: #bbb;
+        text-decoration: none;
+        cursor: pointer;
+      }
+
+      #caption {
+        margin: auto;
+        display: block;
+        width: 80%;
+        max-width: 700px;
+        text-align: center;
+        color: #ccc;
+        padding: 10px 0;
+        height: 150px;
+      }
