@@ -1,23 +1,36 @@
-<!DOCTYPE HTML>
+<!DOCTYPE html>
 <html>
-	<head>
-		<title>КовкаИнг</title>
-		<meta charset="utf-8" />
-		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
-		<meta name="description" content="Кованые изделия, производство и монтаж любой сложности, художественная ковка "/>
-		<meta name="keywords" content="ковка, ковка ингушетия, ковка сунжа, изделия из металла, кованые изделия, ворота, перила, беседки, скамьи, скамьи-качалки, художественная ковка"/>
-		<link rel="stylesheet" href="assets/css/main.css" />
-		<link rel="stylesheet" href="assets/css/fontawesome-all.min.css">
-		
-		<!-- Favicon -->
-		<link
-		rel="icon"
-		href="images/favicon (2).ico"
-		sizes="any"
-		type="image/x-icon"
-	  />
-	  <link rel="icon" href="foto/favicon (2).svg" type="image/svg+xml" />
-	  <link rel="icon" href="foto/favicon (2).png" type="image/png" />
+  <head>
+    <title>КовкаИнг</title>
+    <meta charset="utf-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, user-scalable=no"
+    />
+    <meta
+      name="description"
+      content="Кованые изделия, производство и монтаж любой сложности, художественная ковка "
+    />
+    <meta
+      name="keywords"
+      content="ковка, ковка ингушетия, ковка сунжа, изделия из металла, кованые изделия, ворота, перила, беседки, скамьи, скамьи-качалки, художественная ковка"
+    />
+    <link rel="stylesheet" href="assets/css/main.css" />
+    <link rel="stylesheet" href="assets/css/fontawesome-all.min.css" />
+	<!-- Swiper CSS -->
+	<link
+	rel="stylesheet"
+	href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"
+	/>
+    <!-- Favicon -->
+    <link
+      rel="icon"
+      href="images/favicon (2).ico"
+      sizes="any"
+      type="image/x-icon"
+    />
+    <link rel="icon" href="foto/favicon (2).svg" type="image/svg+xml" />
+    <link rel="icon" href="foto/favicon (2).png" type="image/png" />
 
     <!-- Стили для модального окна -->
     <style>
@@ -31,17 +44,19 @@
         width: 100%;
         height: 100%;
         overflow: auto;
-        background-color: rgba(0,0,0,0.9);
+        background-color: rgba(0, 0, 0, 0.9);
       }
-      
+
       .modal-content {
         margin: auto;
         display: block;
         width: 80%;
         max-width: 1200px;
       }
-      
-      .close, .prev, .next {
+
+      .close,
+      .prev,
+      .next {
         position: absolute;
         top: 15px;
         right: 35px;
@@ -50,8 +65,9 @@
         font-weight: bold;
         cursor: pointer;
       }
-      
-      .prev, .next {
+
+      .prev,
+      .next {
         top: 50%;
         transform: translateY(-50%);
         padding: 16px;
@@ -60,15 +76,15 @@
         font-size: 20px;
         user-select: none;
       }
-      
+
       .prev {
         left: 15px;
       }
-      
+
       .next {
         right: 15px;
       }
-      
+
       .close:hover,
       .close:focus,
       .prev:hover,
@@ -79,7 +95,7 @@
         text-decoration: none;
         cursor: pointer;
       }
-      
+
       #caption {
         margin: auto;
         display: block;
@@ -91,362 +107,269 @@
         height: 150px;
       }
     </style>
-	<style>
-		.social-icons a.social-icon i {
-		  transition: color 0.3s ease;
-		}
-		
-		.social-icons a.social-icon:hover i {
-		  color: #f1a33c !important;
-		}
-	  </style>
+    <style>
+      .social-icons a.social-icon i {
+        transition: color 0.3s ease;
+      }
 
-	</head>
-	<body class="is-preload">
+      .social-icons a.social-icon:hover i {
+        color: #f1a33c !important;
+      }
+    </style>
+  </head>
+  <body class="is-preload">
+    <!-- Header -->
+    <div id="header">
+      <div class="top">
+        <!-- Logo -->
+        <div id="logo">
+          <span class="image avatar48"
+            ><img src="images/foto/logo.jpg" alt=""
+          /></span>
+          <h1 id="title">КовкаИнг</h1>
+        </div>
 
-		<!-- Header -->
-			<div id="header">
+        <!-- Nav -->
+        <nav id="nav">
+          <ul>
+            <li>
+              <a href="#top" id="top-link"
+                ><span class="icon solid fa-home">Главное</span></a
+              >
+            </li>
+            <li>
+              <a href="#portfolio" id="portfolio-link"
+                ><span class="icon solid fa-th">Наши работы</span></a
+              >
+            </li>
+          </ul>
+        </nav>
+      </div>
 
-				<div class="top">
+      <div class="bottom">
+        <!-- Social Icons -->
+        <ul class="icons">
+          <li>
+            <a
+              href="https://www.instagram.com/#"
+              target="_blank"
+              rel="noopener noreferrer"
+              class="icon brands fa-instagram"
+              ><span class="label">Instagram</span></a
+            >
+          </li>
+          <li>
+            <a
+              href="https://wa.me/79626455557"
+              target="_blank"
+              rel="noopener noreferrer"
+              class="icon brands fa-whatsapp"
+              ><span class="label">Whatsapp</span></a
+            >
+          </li>
+          <li>
+            <a
+              href="https://www.avito.ru/ваш_профиль"
+              target="_blank"
+              rel="noopener noreferrer"
+              class="avito-icon"
+            >
+              <svg width="24" height="24" viewBox="0 0 24 24">
+                <path fill="currentColor" />
+              </svg>
+              <span class="label">Avito</span>
+            </a>
+          </li>
+          <li>
+            <a
+              href="mailto:padievahmed@gmail.com"
+              class="icon solid fa-envelope"
+              ><span class="label">Email</span></a
+            >
+          </li>
+        </ul>
+      </div>
+    </div>
 
-					<!-- Logo -->
-						<div id="logo">
-							<span class="image avatar48"><img src="images/foto/logo.jpg" alt="" /></span>
-							<h1 id="title">КовкаИнг</h1>
-						</div>
+    <!-- Main -->
+    <div id="main">
+      <!-- Intro -->
+      <section id="top" class="one dark cover">
+        <video autoplay muted loop playsinline class="background-video">
+          <source src="video/welder.mp4" type="video/mp4" />
+          Your browser does not support the video tag.
+        </video>
+        <div class="container">
+          <header>
+            <h2 class="alt">
+              <strong>КовкаИнг</strong> - цех металлоизделий в Сунже
+            </h2>
+          
+            <p>
+              Ворота, перилы, зонты, двери, решетки, лестницы, беседки, скамьи,
+              столы,<br />
+              стеллажи, кованые украшения и многое другое.
+            </p>
+           
+          </header>
+          <div class="contact-wrapper">
+            <div class="contact-info">
+              <h3>Адрес цеха:</h3>
+              <p>
+                Россия, Республика Ингушетия,<br />
+                Сунжа, рынок металлоизделий
+              </p>
+			  <div class="social-icons">
+                <a
+                  href="https://www.avito.ru/ваш_профиль"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  class="social-icon avito-icon"
+                >
+                  <svg width="24" height="24" viewBox="0 0 24 24">
+                    <path
+                      fill="currentColor"
+                      d="M12 0a12 12 0 1 0 12 12A12 12 0 0 0 12 0zm0 22a10 10 0 1 1 10-10 10 10 0 0 1-10 10zm-2.65-8.5v-3.2h1.5v3.2zm3.15 0v-3.2h1.5v3.2z"
+                    />
+                  </svg>
+                  <span class="label">Avito</span>
+                </a>
+                <a
+                  href="https://wa.me/79626455557"
+                  target="_blank"
+                  class="social-icon"
+                  rel="noopener noreferrer"
+                >
+                  <i class="icon brands fa-whatsapp"></i>
+                </a>
+                <a
+                  href="https://www.instagram.com/#"
+                  target="_blank"
+                  class="social-icon"
+                  rel="noopener noreferrer"
+                >
+                  <i class="icon brands fa-instagram"></i>
+                </a>
+              </div>
+            </div>
 
-					<!-- Nav -->
-						<nav id="nav">
-							<ul>
-								<li><a href="#top" id="top-link"><span class="icon solid fa-home">Главное</span></a></li>
-								<li><a href="#portfolio" id="portfolio-link"><span class="icon solid fa-th">Портфолио</span></a></li>
-								<!-- <li><a href="#about" id="about-link"><span class="icon solid fa-user">Продукты и услуги</span></a></li> -->
-								<li><a href="#contact" id="contact-link"><span class="icon solid fa-envelope">Контакты</span></a></li>
-							</ul>
-						</nav>
+            <div class="contact-info">
+              <h3>Наши контакты:</h3>
+              <p>
+                <a
+                  href="tel:+79626455557"
+                  class="contact-link"
+                  target="_blank"
+                  class="social-icon"
+                  rel="noopener noreferrer"
+                >
+                  Телефон: +7 962 645 55 57 </a
+                ><br />
+                <a
+                  href="https://wa.me/79626455557"
+                  class="contact-link"
+                  target="_blank"
+                  class="social-icon"
+                  rel="noopener noreferrer"
+                >
+                  WhatsApp: +7 962 645 55 57 </a
+                ><br />
+                <a href="mailto:padievahmed@gmail.com" class="contact-link">
+                  padievahmed@gmail.com
+                </a>
+              </p>
 
-				</div>
+              
+            </div>
+          </div>
+        </div>
+      </section>
 
-				<div class="bottom">
+      <!-- Portfolio -->
+      <section id="portfolio" class="two">
+        <div class="container">
+          <header>
+            <h2>Наши работы</h2>
+          </header>
+          <p>
+            Наш цех – это команда профессионалов с многолетним опытом в
+            металлообработке. Мы работаем с различными видами металла и
+            предлагаем индивидуальные решения для промышленности, строительства
+            и частных заказов.
+          </p>
+		  <div class="row">
+         <!-- Swiper -->
+<div class="swiper-container gallery-slider">
+  <div class="swiper-wrapper">
+    <!-- Each image -->
+    <div class="swiper-slide">
+      <img src="images/foto/ворота.jpg" alt="Ворота" />
+    </div>
+    <div class="swiper-slide">
+      <img src="images/foto/ворота1.jpg" alt="Ворота" />
+    </div>
+    <div class="swiper-slide">
+      <img src="images/foto/ворота2.jpg" alt="Ворота" />
+    </div>
+    <div class="swiper-slide">
+      <img src="images/foto/ворота3.jpg" alt="Ворота" />
+    </div>
+    <!-- Add more slides here -->
+  </div>
 
-					<!-- Social Icons -->
-						<ul class="icons">
-							<li><a href="https://www.instagram.com/#" target="_blank"  rel="noopener noreferrer" class="icon brands fa-instagram"><span class="label">Instagram</span></a></li>
-							<li><a href="https://wa.me/79626455557" target="_blank" rel="noopener noreferrer" class="icon brands fa-whatsapp"><span class="label">Whatsapp</span></a></li>
-							<li>
-								<a href="https://www.avito.ru/ваш_профиль" 
-								   target="_blank"
-								   rel="noopener noreferrer"
-								   class="avito-icon">
-								  <svg width="24" height="24" viewBox="0 0 24 24">
-									<path fill="currentColor" />
-								  </svg>
-								  <span class="label">Avito</span>
-								</a>
-							</li>
-							<li><a href="mailto:padievahmed@gmail.com" class="icon solid fa-envelope"><span class="label">Email</span></a></li>
-						</ul>
+  <!-- Navigation buttons -->
+  <div class="swiper-button-prev"></div>
+  <div class="swiper-button-next"></div>
 
-				</div>
+  <!-- Pagination (optional) -->
+  <div class="swiper-pagination"></div>
+</div>
+</div>
+        </div>
+      </section>
 
-			</div>
-
-		<!-- Main -->
-			<div id="main">
-				<!-- Intro -->
-					<section id="top" class="one dark cover">
-						<video autoplay muted loop playsinline class="background-video">
-							<source src="video/welder.mp4" type="video/mp4" />
-							Your browser does not support the video tag.
-						</video>
-						<div class="container">
-							<header>
-								<h2 class="alt"><strong>КовкаИнг</strong> - цех металлоизделий в Сунже</h2>
-								<!-- <h3>Художественная ковка, включающая технологии горячего и холодного формования</h3> -->
-								<p>Ворота, перилы, зонты, двери, решетки, лестницы, беседки, скамьи, столы, стеллажи, кованые украшения и многое другое.</p>
-								<!-- <p>Доверьте нам производство – мы воплотим ваши идеи в металле!</p> -->
-							</header>
-							<footer>
-								<a href="#contact" class="button scrolly">Связаться с нами</a>
-							</footer>
-						</div>
-					</section>
-
-				<!-- Portfolio -->
-					<section id="portfolio" class="two">
-						<div class="container">
-							<header>
-								<h2>Портфолио</h2>
-							</header>
-							<p>
-								Наш цех – это команда профессионалов с многолетним опытом в металлообработке.
-								Мы работаем с различными видами металла и предлагаем индивидуальные решения для промышленности, строительства и частных заказов.
-							</p>
-							<div class="row">
-								<div class="col-4 col-12-mobile">
-									<article class="item">
-										<a href="javascript:void(0)" class="image fit"><img src="images/foto/Двери.jpg" alt="Двери"></a>
-										<header>
-											<h3>Двери</h3>
-										</header>
-									</article>
-									<article class="item">
-										<a href="javascript:void(0)" class="image fit"><img src="images/foto/Перила внутренние.jpg" alt="Перила" /></a>
-										<header>
-											<h3>Перила</h3>
-										</header>
-									</article>
-								</div>
-								<div class="col-4 col-12-mobile">
-									<article class="item">
-										<a href="javascript:void(0)" class="image fit"><img src="images/foto/ворота3.jpg" alt="Ворота" /></a>
-										<header>
-											<h3>Ворота</h3>
-										</header>
-									</article>
-									<article class="item">
-										<a href="javascript:void(0)" class="image fit"><img src="images/foto/ворота2.jpg" alt="Ворота" /></a>
-										<header>
-											<h3>Ворота</h3>
-										</header>
-									</article>
-								</div>
-								<div class="col-4 col-12-mobile">
-									<article class="item">
-										<a href="javascript:void(0)" class="image fit"><img src="images/foto/ворота1.jpg" alt="Ворота" /></a>
-										<header>
-											<h3>Ворота</h3>
-										</header>
-									</article>
-									<article class="item">
-										<a href="javascript:void(0)" class="image fit"><img src="images/foto/ворота.jpg" alt="Ворота" /></a>
-										<header>
-											<h3>Ворота</h3>
-										</header>
-									</article>
-								</div>
-								<div class="col-4 col-12-mobile">
-									<article class="item">
-										<a href="javascript:void(0)" class="image fit"><img src="images/foto/скамьи качалки.jpg" alt="Скамьи-качалки" /></a>
-										<header>
-											<h3>Скамьи-качалки</h3>
-										</header>
-									</article>
-									<article class="item">
-										<a href="javascript:void(0)" class="image fit"><img src="images/foto/беседка1.jpg" alt="Беседка" /></a>
-										<header>
-											<h3>Беседка</h3>
-										</header>
-									</article>
-								</div>
-								<div class="col-4 col-12-mobile">
-									<article class="item">
-										<a href="javascript:void(0)" class="image fit"><img src="images/foto/беседка.jpg" alt="Беседка" /></a>
-										<header>
-											<h3>Беседка</h3>
-										</header>
-									</article>
-									<article class="item">
-										<a href="javascript:void(0)" class="image fit"><img src="images/foto/решетки для окон.jpg" alt="Решетки для окон" /></a>
-										<header>
-											<h3>Решетки для окон</h3>
-										</header>
-									</article>
-								</div>
-								<div class="col-4 col-12-mobile">
-									<article class="item">
-										<a href="javascript:void(0)" class="image fit"><img src="images/foto/перила1.jpg" alt="Перила и Зонты" /></a>
-										<header>
-											<h3>Перила и Зонты</h3>
-										</header>
-									</article>
-									<article class="item">
-										<a href="javascript:void(0)" class="image fit"><img src="images/foto/Зонты.jpg" alt="Перила и Зонты" /></a>
-										<header>
-											<h3>Перила и Зонты</h3>
-										</header>
-									</article>
-								</div>
-							</div>
-						</div>
-					</section>
-
-				<!-- About Me
-					<section id="about" class="three">
-						<div class="container">
-							<header>
-								<h2>Продукты и услуги</h2>
-							</header>
-							<a href="#" class="image featured"><img src="images/pic08.jpg" alt="" /></a>
-							<p style="text-align: justify; max-width: 700px; margin: 0 auto; line-height: 1.5; font-family: Arial, sans-serif;">
-								Производство кованой продукции различного профиля:
-								<ul style="text-align: left; padding-left: 20px; list-style-type: disc;">
-									<li>Металлоконструкции (каркасы, зонты, опоры)</li>
-									<li>Ворота, заборы, беседки и ограждения</li>
-									<li>Кованые изделия (декоративные элементы, решетки для окон и скамьи-качалки)</li>
-									<li>Нестандартные изделия по чертежам заказчика</li>
-									<li>Работаем с черным и нержавеющим металлом, алюминием. Возможна резка, сварка, фрезеровка и покраска.</li>
-								</ul>
-							</p>
-						</div>
-					</section> -->
-
-				<!-- Contact -->
-			<section id="contact" class="four">
-			<div class="container">
-				<header>
-					<h2>Связаться с нами</h2>
-				</header>
-
-				<div class="contact-wrapper">
-					<div class="contact-info">
-						<h3>Адрес цеха:</h3>
-						<p>
-							Россия, Республика Ингушетия,<br>
-							Сунжа, рынок металлоизделий
-						</p>
-					</div>
-
-					<div class="contact-info">
-						<h3>Наши контакты:</h3>
-						<p>
-							<a href="tel:+79626455557" class="contact-link" target="_blank" class="social-icon" rel="noopener noreferrer">
-								Телефон: +7 962 645 55 57
-							</a><br>
-							<a href="https://wa.me/79626455557" class="contact-link" target="_blank" class="social-icon" rel="noopener noreferrer">
-								WhatsApp: +7 962 645 55 57
-							</a><br>
-							<a href="mailto:padievahmed@gmail.com" class="contact-link">
-								padievahmed@gmail.com
-							</a>
-						</p>
-
-						<div class="social-icons">
-
-							<a href="https://www.avito.ru/ваш_профиль" 
-								   target="_blank"
-								   rel="noopener noreferrer"
-								   class="social-icon avito-icon">
-								  <svg width="24" height="24" viewBox="0 0 24 24">
-									<path fill="currentColor" d="M12 0a12 12 0 1 0 12 12A12 12 0 0 0 12 0zm0 22a10 10 0 1 1 10-10 10 10 0 0 1-10 10zm-2.65-8.5v-3.2h1.5v3.2zm3.15 0v-3.2h1.5v3.2z"/>
-								  </svg>
-								  <span class="label">Avito</span>
-							</a>
-							<a href="https://wa.me/79626455557" target="_blank" class="social-icon" rel="noopener noreferrer">
-								<i class="icon brands fa-whatsapp"></i>
-								
-							</a>
-							<a href="https://www.instagram.com/#" target="_blank" class="social-icon" rel="noopener noreferrer">
-								<i class="icon brands fa-instagram"></i>
-							</a>
-
-						</div>
-					</div>
-				</div>
-			</div>
-			</section>
-			
       <!-- Модальное окно для галереи изображений -->
       <div id="imageModal" class="modal">
         <span class="close">&times;</span>
         <span class="prev">&lt;</span>
         <span class="next">&gt;</span>
-        <img class="modal-content" id="modalImage">
+        <img class="modal-content" id="modalImage" />
         <div id="caption"></div>
       </div>
-			
-		<!-- Scripts -->
-			<script src="assets/js/jquery.min.js"></script>
-			<script src="assets/js/jquery.scrolly.min.js"></script>
-			<script src="assets/js/jquery.scrollex.min.js"></script>
-			<script src="assets/js/browser.min.js"></script>
-			<script src="assets/js/breakpoints.min.js"></script>
-			<script src="assets/js/util.js"></script>
-			<script src="assets/js/main.js"></script>
-			
-      <script>
-        document.addEventListener('DOMContentLoaded', function() {
-          // Элементы модального окна
-          var modal = document.getElementById("imageModal");
-          var modalImg = document.getElementById("modalImage");
-          var captionText = document.getElementById("caption");
-          var prevBtn = document.querySelector(".prev");
-          var nextBtn = document.querySelector(".next");
-          var closeBtn = document.querySelector(".close");
-          
-          // Массив изображений и текущий индекс
-          var images = [];
-          var currentIndex = 0;
-          
-          // Инициализация галереи
-          var galleryImages = document.querySelectorAll(".image.fit img");
-          galleryImages.forEach(function(img, index) {
-            images.push({
-              src: img.src,
-              alt: img.alt || ""
-            });
-            
-            img.onclick = function() {
-              currentIndex = index;
-              openModal();
-            };
-          });
-          
-          // Функция открытия модального окна
-          function openModal() {
-            if (images.length === 0) return;
-            modal.style.display = "block";
-            modalImg.src = images[currentIndex].src;
-            captionText.innerHTML = images[currentIndex].alt;
-            document.body.style.overflow = "hidden"; // Блокируем скролл страницы
-          }
-          
-          // Функция закрытия модального окна
-          function closeModal() {
-            modal.style.display = "none";
-            document.body.style.overflow = "auto"; // Восстанавливаем скролл
-          }
-          
-          // Навигация по изображениям
-          function showImage(n) {
-            currentIndex = (n + images.length) % images.length;
-            modalImg.src = images[currentIndex].src;
-            captionText.innerHTML = images[currentIndex].alt;
-          }
-          
-          // Обработчики событий
-          closeBtn.onclick = closeModal;
-          
-          prevBtn.onclick = function() {
-            showImage(currentIndex - 1);
-          };
-          
-          nextBtn.onclick = function() {
-            showImage(currentIndex + 1);
-          };
-          
-          // Закрытие по клику вне изображения
-          modal.onclick = function(event) {
-            if (event.target == modal) {
-              closeModal();
-            }
-          };
-          
-          // Закрытие по ESC
-          document.onkeydown = function(event) {
-            if (event.key === "Escape") {
-              closeModal();
-            }
-            // Навигация стрелками
-            else if (event.key === "ArrowLeft") {
-              showImage(currentIndex - 1);
-            }
-            else if (event.key === "ArrowRight") {
-              showImage(currentIndex + 1);
-            }
-          };
-        });
-      </script>
+	</div>
+      <!-- Scripts -->
+      <script src="assets/js/jquery.min.js"></script>
+      <script src="assets/js/jquery.scrolly.min.js"></script>
+      <script src="assets/js/jquery.scrollex.min.js"></script>
+      <script src="assets/js/browser.min.js"></script>
+      <script src="assets/js/breakpoints.min.js"></script>
+      <script src="assets/js/util.js"></script>
+      <script src="assets/js/main.js"></script>
+	<script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+	<script>
+  const swiper = new Swiper(".gallery-slider", {
+    loop: true,
+    spaceBetween: 20,
+    centeredSlides: true,
+    slidesPerView: 1,
+    navigation: {
+      nextEl: ".swiper-button-next",
+      prevEl: ".swiper-button-prev",
+    },
+    pagination: {
+      el: ".swiper-pagination",
+      clickable: true,
+    },
+    breakpoints: {
+      768: {
+        slidesPerView: 1,
+      },
+      1024: {
+        slidesPerView: 1,
+      },
+    },
+  });
+</script>
 
-	</body>
+  </body>
 </html>

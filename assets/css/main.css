@@ -2496,7 +2496,7 @@ input, select, textarea {
 					border-top: solid 1px rgba(255, 255, 255, 0.05);
 					box-shadow: 0 -1px 0 0 rgba(0, 0, 0, 0.15);
 					padding-top: 2em;
-					margin-top: 2em;
+					margin-top: 10em;
 					position: relative;
 				}
 
@@ -2690,4 +2690,66 @@ input, select, textarea {
 			
 
 	}	
-	
+
+/* Adjust swiper container padding for small screens */
+@media (max-width: 768px) {
+  .swiper-container.gallery-slider {
+    padding: 10px 0;
+  }
+  .swiper-slide img {
+  width: 100%;
+  margin: auto;
+  height: auto;
+  max-width: 70%;
+  display: block;
+  object-fit: contain;
+  border-radius: 10px; /* Optional: rounded corners */
+}
+  /* Optional: reduce arrow size */
+  .swiper-button-next,
+  .swiper-button-prev {
+    width: 30px;
+    height: 30px;
+  }
+
+  .swiper-button-next::after,
+  .swiper-button-prev::after {
+    font-size: 18px;
+  }
+}	
+
+
+
+
+.swiper-container.gallery-slider {
+  position: relative;
+  width: 100%;
+  padding: 40px 0;
+}
+
+/* Make arrows visible and properly placed */
+.swiper-button-next,
+.swiper-button-prev {
+  color: #333333; /* or white, if dark background */
+  top: 50%;
+  transform: translateY(-50%);
+  z-index: 10;
+}
+
+/* Optional: bigger arrows */
+.swiper-button-next::after,
+.swiper-button-prev::after {
+  font-size: 24px;
+}
+
+/* Optional: make arrows stand out better */
+.swiper-button-next,
+.swiper-button-prev {
+  background-color: rgba(255, 255, 255, 0.6);
+  border-radius: 50%;
+  width: 40px;
+  height: 40px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
