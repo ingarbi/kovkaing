@@ -26,14 +26,12 @@
 	<link rel="icon" type="image/png" href="foto/favicon-32x32.png" sizes="32x32" />
 	<link rel="manifest" href="foto/site.webmanifest">
 
-
     <link
       rel="icon"
       href="images/favicon (2).ico"
       sizes="any"
       type="image/x-icon"
     />
-    <link rel="icon" href="foto/favicon (2).svg" type="image/svg+xml" />
   </head>
   <body class="is-preload">
     <!-- Header -->
@@ -220,50 +218,50 @@
 			<div class="swiper-wrapper">
 				<!-- Each image -->
 				<div class="swiper-slide">
-				<img src="images/foto/ворота.jpg" alt="Ворота" />
+				<img src="images/foto/ворота.jpg" loading="lazy" width="800" height="600" alt="Ворота" />
 				</div>
 				<div class="swiper-slide">
-				<img src="images/foto/ворота1.jpg" alt="Ворота" />
+				<img src="images/foto/ворота1.jpg" loading="lazy" width="800" height="600" alt="Ворота" />
 				</div>
 				<div class="swiper-slide">
-				<img src="images/foto/ворота2.jpg" alt="Ворота" />
+				<img src="images/foto/ворота2.jpg" loading="lazy" width="800" height="600" alt="Ворота" />
 				</div>
 				<div class="swiper-slide">
-				<img src="images/foto/ворота3.jpg" alt="Ворота" />
+				<img src="images/foto/ворота3.jpg" loading="lazy" width="800" height="600" alt="Ворота" />
 				</div>
 
 				<div class="swiper-slide">
-					<img src="images/foto/беседка.jpg" alt="Беседка" />
+					<img src="images/foto/беседка.jpg" loading="lazy" width="800" height="600" alt="Беседка" />
 				</div>
 				<div class="swiper-slide">
-					<img src="images/foto/беседка1.jpg" alt="Беседка" />
+					<img src="images/foto/беседка1.jpg" loading="lazy" width="800" height="600" alt="Беседка" />
 				</div>
 				<div class="swiper-slide">
-					<img src="images/foto/Двери.jpg" alt="Двери" />
+					<img src="images/foto/Двери.jpg" loading="lazy" width="800" height="600" alt="Двери" />
 				</div>
 				<div class="swiper-slide">
-					<img src="images/foto/Зонты.jpg" alt="Зонты" />
+					<img src="images/foto/Зонты.jpg" loading="lazy" width="800" height="600" alt="Зонты" />
 				</div>
 				<div class="swiper-slide">
-					<img src="images/foto/зонты1.jpg" alt="Зонты"  />
+					<img src="images/foto/зонты1.jpg" loading="lazy" width="800" height="600" alt="Зонты"  />
 				</div>
 				<div class="swiper-slide">
-					<img src="images/foto/Перила внутренние.jpg" alt="Перила" />
+					<img src="images/foto/Перила внутренние.jpg" loading="lazy" width="800" height="600" alt="Перила" />
 				</div>
 				<div class="swiper-slide">
-					<img src="images/foto/перила.jpg" alt="Перила" />
+					<img src="images/foto/перила.jpg" loading="lazy" width="800" height="600" alt="Перила" />
 				</div>
 				<div class="swiper-slide">
-					<img src="images/foto/перила1.jpg" alt="Перила" />
+					<img src="images/foto/перила1.jpg" loading="lazy" width="800" height="600" alt="Перила" />
 				</div>
 				<div class="swiper-slide">
-					<img src="images/foto/перила2.jpg" alt="Перила" />
+					<img src="images/foto/перила2.jpg" loading="lazy" width="800" height="600" alt="Перила" />
 				</div>
 				<div class="swiper-slide">
-					<img src="images/foto/перила3.jpg" alt="Перила" />
+					<img src="images/foto/перила3.jpg" loading="lazy" width="800" height="600" alt="Перила" />
 				</div>
 				<div class="swiper-slide">
-					<img src="images/foto/решетки для окон.jpg" alt="Решетки" />
+					<img src="images/foto/решетки для окон.jpg" loading="lazy" width="800" height="600" alt="Решетки" />
 				</div>
 				<div class="swiper-slide">
 					<img src="images/foto/скамьи качалки.jpg" loading="lazy"
@@ -314,26 +312,12 @@
 			},
 		});
 	</script>
-		const swiper = new Swiper(".gallery-slider", {
-		loop: true,
-		lazy: true,
-		autoplay: {
-		  delay: 5000,
-		},
-		navigation: {
-		  nextEl: ".swiper-button-next",
-		  prevEl: ".swiper-button-prev",
-		}
-	  });
-	  
-
-
 	<script type="application/ld+json">
 		{
 		"@context": "https://schema.org",
 		"@type": "LocalBusiness",
 		"name": "КовкаИнг",
-		"image": "https://вашсайт.ru/images/logo.jpg",
+		"image": "http://kovkaing.ru/images/foto/logo.jpg",
 		"description": "Производство кованых изделий в Сунже: ворота, перила, беседки",
 		"telephone": "+79626455557",
 		"address": {
@@ -341,9 +325,12 @@
 			"addressLocality": "Сунжа",
 			"addressRegion": "Ингушетия",
 			"streetAddress": "рынок металлоизделий"
+			"latitude": "43.3167",  // Укажите реальные координаты
+    		"longitude": "45.0667"
 		},
 		"openingHours": "Mo-Fr 08:00-18:00",
 		"priceRange": "$$"
+		"url": "https://kovkaing.ru"
 		}
 	</script>
   </body>
