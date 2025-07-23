@@ -7,7 +7,7 @@
       name="viewport"
       content="width=device-width, initial-scale=1, user-scalable=no"
     />
-    <meta name="description" content="Производство кованых изделий в Сунже: ворота, перила, беседки. Индивидуальные заказы, гарантия качества. ☎ +7 962 645-55-57" rel="noopener noreferrer">
+    <meta name="description" content="Производство кованых изделий в Сунже: ворота, перила, беседки. Индивидуальные заказы, гарантия качества. ☎ +7 962 645-55-57">
     <meta
       name="keywords"
       content="ковка, ковка ингушетия, ковка сунжа, изделия из металла, кованые изделия, ворота, перила, беседки, скамьи, скамьи-качалки, художественная ковка"
@@ -21,10 +21,10 @@
 	/>
     <!-- Favicon -->
 	
-	<link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
-	<link rel="icon" type="image/png" href="/favicon-16x16.png" sizes="16x16" />
-	<link rel="icon" type="image/png" href="/favicon-32x32.png" sizes="32x32" />
-	<link rel="manifest" href="/site.webmanifest">
+	<link rel="apple-touch-icon" sizes="180x180" href="foto/apple-touch-icon.png" />
+	<link rel="icon" type="image/png" href="foto/favicon-16x16.png" sizes="16x16" />
+	<link rel="icon" type="image/png" href="foto/favicon-32x32.png" sizes="32x32" />
+	<link rel="manifest" href="foto/site.webmanifest">
 
 
     <link
@@ -34,7 +34,6 @@
       type="image/x-icon"
     />
     <link rel="icon" href="foto/favicon (2).svg" type="image/svg+xml" />
-    <link rel="icon" href="foto/favicon (2).png" type="image/png" />
   </head>
   <body class="is-preload">
     <!-- Header -->
@@ -246,7 +245,7 @@
 					<img src="images/foto/Зонты.jpg" alt="Зонты" />
 				</div>
 				<div class="swiper-slide">
-					<img src="images/foto/зонты1.jpg" alt="Зонты" />
+					<img src="images/foto/зонты1.jpg" alt="Зонты"  />
 				</div>
 				<div class="swiper-slide">
 					<img src="images/foto/Перила внутренние.jpg" alt="Перила" />
@@ -267,7 +266,9 @@
 					<img src="images/foto/решетки для окон.jpg" alt="Решетки" />
 				</div>
 				<div class="swiper-slide">
-					<img src="images/foto/скамьи качалки.jpg" alt="Скамьи" />
+					<img src="images/foto/скамьи качалки.jpg" loading="lazy"
+					width="800"
+					height="600" alt="Скамьи" />
 				</div>
 				<!-- Add more slides here -->
 				</div>
@@ -281,38 +282,69 @@
     </section>
 
       <!-- Scripts -->
-      <script src="assets/js/jquery.min.js"></script>
-      <script src="assets/js/jquery.scrolly.min.js"></script>
-      <script src="assets/js/jquery.scrollex.min.js"></script>
-      <script src="assets/js/browser.min.js"></script>
-      <script src="assets/js/breakpoints.min.js"></script>
-      <script src="assets/js/util.js"></script>
-      <script src="assets/js/main.js"></script>
+	<script src="assets/js/jquery.min.js"></script>
+	<script src="assets/js/jquery.scrolly.min.js"></script>
+	<script src="assets/js/jquery.scrollex.min.js"></script>
+	<script src="assets/js/browser.min.js"></script>
+	<script src="assets/js/breakpoints.min.js"></script>
+	<script src="assets/js/util.js"></script>
+	<script src="assets/js/main.js"></script>
 	<script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
 	<script>
-  const swiper = new Swiper(".gallery-slider", {
-    loop: true,
-    spaceBetween: 20,
-    centeredSlides: true,
-    slidesPerView: 1,
-    navigation: {
-      nextEl: ".swiper-button-next",
-      prevEl: ".swiper-button-prev",
-    },
-    pagination: {
-      el: ".swiper-pagination",
-      clickable: true,
-    },
-    breakpoints: {
-      768: {
-        slidesPerView: 1,
-      },
-      1024: {
-        slidesPerView: 1,
-      },
-    },
-  });
-</script>
+		const swiper = new Swiper(".gallery-slider", {
+			loop: true,
+			spaceBetween: 20,
+			centeredSlides: true,
+			slidesPerView: 1,
+			navigation: {
+			nextEl: ".swiper-button-next",
+			prevEl: ".swiper-button-prev",
+			},
+			pagination: {
+			el: ".swiper-pagination",
+			clickable: true,
+			},
+			breakpoints: {
+			768: {
+				slidesPerView: 1,
+			},
+			1024: {
+				slidesPerView: 1,
+			},
+			},
+		});
+	</script>
+		const swiper = new Swiper(".gallery-slider", {
+		loop: true,
+		lazy: true,
+		autoplay: {
+		  delay: 5000,
+		},
+		navigation: {
+		  nextEl: ".swiper-button-next",
+		  prevEl: ".swiper-button-prev",
+		}
+	  });
+	  
 
+
+	<script type="application/ld+json">
+		{
+		"@context": "https://schema.org",
+		"@type": "LocalBusiness",
+		"name": "КовкаИнг",
+		"image": "https://вашсайт.ru/images/logo.jpg",
+		"description": "Производство кованых изделий в Сунже: ворота, перила, беседки",
+		"telephone": "+79626455557",
+		"address": {
+			"@type": "PostalAddress",
+			"addressLocality": "Сунжа",
+			"addressRegion": "Ингушетия",
+			"streetAddress": "рынок металлоизделий"
+		},
+		"openingHours": "Mo-Fr 08:00-18:00",
+		"priceRange": "$$"
+		}
+	</script>
   </body>
 </html>
