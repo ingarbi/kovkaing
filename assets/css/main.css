@@ -131,10 +131,12 @@ input, select, textarea {
 	}
 
 		h2.alt {
-			color: #ff0000;
+			color: #888;
 		}
 
-	
+			h2.alt strong {
+				color: #666;
+			}
 
 	h3 {
 		font-size: 1.5em;
@@ -252,11 +254,6 @@ input, select, textarea {
 
 			.container {
 				width: 100%;
-			}
-			.alt{
-				font-size: 36px;
-				font-weight: 500;
-				color: #fd0000;
 			}
 
 		}
@@ -2102,6 +2099,7 @@ input, select, textarea {
 		margin: 1.75em 1.5em 1.5em 1.5em;
 		min-height: 48px;
 		cursor: default;
+		
 	}
 
 		#logo h1 {
@@ -2207,6 +2205,49 @@ input, select, textarea {
 
 /* Main */
 
+/* Blurred video background */
+#top {
+  position: relative;
+  overflow: hidden;
+}
+
+#top .background-video {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  z-index: 0;
+  filter: blur(10px);
+  transform: scale(1.1); /* Prevent edge cropping from blur */
+  pointer-events: none;
+}
+
+#top .container {
+  position: relative;
+  z-index: 1;
+}
+#top.one {
+  background: none !important;
+}
+#top.one.cover {
+  height: 100vh; /* Full screen */
+  min-height: 600px; /* Optional: ensures it doesn't get too short on mobile */
+  padding: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  position: relative;
+}
+	#portfolio, #about, #contact {
+	scroll-margin-top: 100px; /* Adjust based on header height */
+	}
+	#contact {
+  min-height: 100vh;
+}
+
 	#main {
 		margin-left: 375px;
 	}
@@ -2250,8 +2291,8 @@ input, select, textarea {
 			}
 
 			#main > section.one {
-				background-image: linear-gradient(rgb(27, 27, 27));
-				
+				background-color: #81918E;
+				background-image: url("../../images/banner.jpg");
 			}
 
 			#main > section.two {
@@ -2455,7 +2496,7 @@ input, select, textarea {
 					border-top: solid 1px rgba(255, 255, 255, 0.05);
 					box-shadow: 0 -1px 0 0 rgba(0, 0, 0, 0.15);
 					padding-top: 2em;
-					margin-top: 2em;
+					margin-top: 10em;
 					position: relative;
 				}
 
@@ -2645,93 +2686,12 @@ input, select, textarea {
 				#footer .copyright li:first-child {
 					margin-top: 0;
 				}
-	}	
-	
 
-
-				.social-icons a.social-icon i {
-		  transition: color 0.3s ease;
-		}
-		
-		.social-icons a.social-icon:hover i {
-		  color: #f1a33c !important;
-		}
-
-	      .modal {
-        display: none;
-        position: fixed;
-        z-index: 1000;
-        padding-top: 50px;
-        left: 0;
-        top: 0;
-        width: 100%;
-        height: 100%;
-        overflow: auto;
-        background-color: rgba(0,0,0,0.9);
-      }
-      
-      .modal-content {
-        margin: auto;
-        display: block;
-        width: 80%;
-        max-width: 1200px;
-      }
-      
-      .close, .prev, .next {
-        position: absolute;
-        top: 15px;
-        right: 35px;
-        color: #f1f1f1;
-        font-size: 40px;
-        font-weight: bold;
-        cursor: pointer;
-      }
-      
-      .prev, .next {
-        top: 50%;
-        transform: translateY(-50%);
-        padding: 16px;
-        color: white;
-        font-weight: bold;
-        font-size: 20px;
-        user-select: none;
-      }
-      
-      .prev {
-        left: 15px;
-      }
-      
-      .next {
-        right: 15px;
-      }
-      
-      .close:hover,
-      .close:focus,
-      .prev:hover,
-      .prev:focus,
-      .next:hover,
-      .next:focus {
-        color: #bbb;
-        text-decoration: none;
-        cursor: pointer;
-      }
-      
-      #caption {
-        margin: auto;
-        display: block;
-        width: 80%;
-        max-width: 700px;
-        text-align: center;
-        color: #ccc;
-        padding: 10px 0;
-        height: 150px;
-      }
-
-	  .alt {
 			
-			color: #ff0000 !important;
-		}
-	/* Adjust swiper container padding for small screens */
+
+	}	
+
+/* Adjust swiper container padding for small screens */
 @media (max-width: 768px) {
   .swiper-container.gallery-slider {
     padding: 10px 0;
@@ -2793,3 +2753,284 @@ input, select, textarea {
   justify-content: center;
   align-items: center;
 }
+
+
+
+/* Базовые стили для герой-секции */
+.hero-section {
+	position: relative;
+	height: 100vh;
+	min-height: 650px;
+	overflow: hidden;
+	display: flex;
+	align-items: center;
+  }
+  
+  /* Видео-фон */
+  .video-background {
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	z-index: 1;
+  }
+  
+  .hero-video {
+	width: 100%;
+	height: 100%;
+	object-fit: cover;
+  }
+  
+  .video-overlay {
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	background: rgba(0, 0, 0, 0.3);
+	z-index: 2;
+  }
+  
+  /* Контент */
+  .hero-content {
+	position: relative;
+	z-index: 3;
+	width: 100%;
+	padding: 0 15px;
+	color: white;
+	text-align: center;
+  }
+  
+  .hero-title {
+	font-size: 3rem;
+	line-height: 1.2;
+	margin-bottom: 1.5rem;
+	text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+  }
+  
+  .highlight {
+	color: #f1a33c; /* Акцентный цвет */
+  }
+  
+  .hero-subtitle {
+	font-size: 1.5rem;
+	line-height: 1.5;
+	max-width: 800px;
+	margin: 0 auto 2rem;
+	text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.8);
+  }
+  
+  /* Адаптация для планшетов */
+  @media (max-width: 992px) {
+	.hero-title {
+	  font-size: 2.5rem;
+	}
+	
+	.hero-subtitle {
+	  font-size: 1.3rem;
+	}
+  }
+  
+  /* Адаптация для мобильных */
+  @media (max-width: 768px) {
+	.hero-section {
+	  min-height: 100vh;
+	  height: auto;
+	  padding: 60px 0;
+	}
+	
+	.hero-title {
+	  font-size: 2rem;
+	  margin-bottom: 1rem;
+	}
+	
+	.hero-subtitle {
+	  font-size: 1.1rem;
+	  margin-bottom: 1.5rem;
+	}
+	
+	.video-overlay {
+	  background: rgba(0, 0, 0, 0.5);
+	}
+  }
+  
+  /* Очень маленькие экраны */
+  @media (max-width: 480px) {
+	.hero-title {
+	  font-size: 1.7rem;
+	}
+	
+	.hero-subtitle {
+	  font-size: 1rem;
+	}
+  }
+
+/* Portfolio Section */
+.portfolio-section {
+	padding: 60px 0;
+	background: #f8f8f8;
+  }
+  
+  .section-header {
+	text-align: center;
+	margin-bottom: 40px;
+	padding: 0 15px;
+  }
+  
+  .section-title {
+	font-size: 2.5rem;
+	color: #222;
+	margin-bottom: 15px;
+  }
+  
+  .section-description {
+	max-width: 800px;
+	margin: 0 auto;
+	font-size: 1.1rem;
+	line-height: 1.6;
+	color: #555;
+  }
+  
+  /* Gallery Container */
+  .gallery-container {
+	position: relative;
+	max-width: 1400px;
+	margin: 0 auto;
+	padding: 0 15px;
+  }
+  
+  /* Swiper Styles */
+  .swiper {
+	width: 100%;
+	height: auto;
+	padding: 10px 0 40px;
+  }
+  
+  .swiper-slide {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	transition: transform 0.3s ease;
+  }
+  
+  .slide-content {
+	position: relative;
+	width: 100%;
+	height: 100%;
+	border-radius: 8px;
+	overflow: hidden;
+	box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+	transition: transform 0.3s ease, box-shadow 0.3s ease;
+  }
+  
+  .gallery-image {
+	width: 100%;
+	height: auto;
+	display: block;
+	transition: transform 0.5s ease;
+  }
+  
+  .image-caption {
+	position: absolute;
+	bottom: 0;
+	left: 0;
+	right: 0;
+	background: rgba(0,0,0,0.7);
+	color: white;
+	padding: 15px;
+	text-align: center;
+	font-size: 1rem;
+  }
+  
+  /* Navigation Buttons */
+  .swiper-nav-button {
+	width: 50px;
+	height: 50px;
+	background: rgba(255,255,255,0.9);
+	border-radius: 50%;
+	box-shadow: 0 2px 10px rgba(0,0,0,0.2);
+	color: #333;
+	transition: all 0.3s ease;
+	opacity: 0.8;
+  }
+  
+  .swiper-nav-button:hover {
+	opacity: 1;
+	transform: scale(1.1);
+  }
+  
+  .swiper-button-prev:after, 
+  .swiper-button-next:after {
+	font-size: 1.5rem;
+	font-weight: bold;
+  }
+  
+  /* Pagination */
+  .swiper-pagination {
+	position: relative;
+	margin-top: 20px;
+  }
+  
+  .swiper-pagination-bullet {
+	width: 12px;
+	height: 12px;
+	background: #ccc;
+	opacity: 1;
+  }
+  
+  .swiper-pagination-bullet-active {
+	background: #f1a33c;
+  }
+  
+  /* Mobile Adaptations */
+  @media (max-width: 1023px) {
+	.portfolio-section {
+	  padding: 40px 0;
+	}
+	
+	.section-title {
+	  font-size: 2rem;
+	}
+	
+	.section-description {
+	  font-size: 1rem;
+	}
+	
+	.swiper-nav-button {
+	  width: 40px;
+	  height: 40px;
+	  display: none; /* Скрываем на планшетах */
+	}
+  }
+ 
+
+  /* Основной контейнер */
+.container {
+	width: 100%;
+	max-width: 1200px; /* или другой подходящий размер */
+	margin: 0 auto;
+	padding: 0 15px;
+	box-sizing: border-box;
+  }
+  
+  /* Галерея */
+  .gallery-container {
+	width: 100%;
+	position: relative;
+  }
+  
+  /* Секция портфолио */
+  .portfolio-section {
+	padding: 60px 0;
+	background: #f8f8f8;
+	margin-left: 375px; /* ширина вашего сайдбара */
+	width: calc(100% - 375px); /* 100% минус ширина сайдбара */
+  }
+  
+  @media (max-width: 960px) {
+	.portfolio-section {
+	  margin-left: 0;
+	  width: 100%;
+	}
+  }
