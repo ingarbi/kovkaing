@@ -3046,14 +3046,16 @@ input, select, textarea {
 	color: #FF8C00 !important;
   }
   
-  /* Специально для иконки Avito */
-  .avito-icon:hover svg path {
-	fill: #FF8C00;
-  }
-  
   /* Плавное изменение цвета */
   .icons a,
   .social-icons a,
   .avito-icon {
 	transition: color 0.3s ease, fill 0.3s ease;
   }
+
+  .label:hover {
+	color: orange;
+  }
+
+
+  
